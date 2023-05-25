@@ -18,7 +18,7 @@ const ToDoItem = ({ id, title, onRemoveToDo, completed }: ToDoItemProps) => {
   return (
     <li className={`${checked ? `list-group-item-success` : `list-group-item-warning`} + list-group-item d-flex flex-row justify-content-between align-items-center`}>
       {title}
-      <div>
+      <div className="d-flex flex-row flex-nowrap">
         <button className="btn" onClick={() => checkToDo()}>
           {checked ? <BsXCircle /> : <BsCheckCircle />}
         </button>
