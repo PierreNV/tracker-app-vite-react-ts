@@ -35,7 +35,7 @@ const expenseForm = ({ onSubmit }: Props) => {
           reset();
         })}
       >
-        <div className="d-flex flex-wrap align-content-center row">
+        <div className="d-flex flex-wrap align-content-between flex-row gap-2">
           <div className="col mb-3">
             <select {...register("category")} name="category" id="category" className="form-select">
               <option defaultValue={"category"}>Category</option>
