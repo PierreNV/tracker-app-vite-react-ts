@@ -32,9 +32,27 @@ const Hangman = () => {
 
   return (
     <div className="container text-center mb-5 d-flex flex-column mx-auto align-items-center">
-      <div className="text-center text-uppercase mb-5">
-        {isLoser() && "Good try but you loose."}
-        {isWinnner() && "You win!"}
+      <div className="text-center text-uppercase mb-5 d-flex flex-column">
+        {isLoser() && (
+          <button
+            onClick={() => {
+              window.location.reload();
+            }}
+            className="btn btn-lg btn-danger"
+          >
+            Good try but you loose, refresh.
+          </button>
+        )}
+        {isWinnner() && (
+          <button
+            onClick={() => {
+              window.location.reload();
+            }}
+            className="btn btn-lg btn-success"
+          >
+            Well done, refresh.
+          </button>
+        )}
       </div>
       <HangmanDrawing numberOfIncorrectLetters={incorrectLetters().length} />
       <HangmanWord selectedLetters={selectedLetters} mysteryWord={mysteryWord} />

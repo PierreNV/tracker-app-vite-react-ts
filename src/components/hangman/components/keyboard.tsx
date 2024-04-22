@@ -8,7 +8,7 @@ type KeyboardProps = {
 const Keyboard = ({ activeLetters, inactiveLetters, disabled, addSelectedLetter }: KeyboardProps) => {
   const Chars = [...Array(26).keys()].map((i) => String.fromCharCode(i + 65));
   return (
-    <div style={{ maxWidth: "720px" }} className="p-5 d-flex flex-wrap justify-content-center align-items-center text-uppercase gap-3">
+    <div style={{ maxWidth: "500px", maxHeight: "300px" }} className="p-1 d-flex flex-wrap justify-content-center align-content-stretch text-uppercase gap-1">
       {Chars.map((char) => (
         <button
           key={char}
