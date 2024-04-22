@@ -19,6 +19,11 @@ const NavTab = () => {
             To Do List
           </NavLink>
         </li>
+        <li className="nav-item" role="presentation">
+          <NavLink className="nav-link" to="/hangman">
+            Hangman
+          </NavLink>
+        </li>
       </ul>
     </header>
   );
