@@ -14,7 +14,7 @@ const Keyboard = ({ activeLetters, inactiveLetters, disabled, addSelectedLetter 
           style={{ minWidth: "50px" }}
           key={char}
           type="button"
-          className={`${activeLetters.includes(char) && "active"} ${inactiveLetters.includes(char) && "disabled"} btn btn-outline-primary`}
+          className={`${activeLetters.includes(char) && "active"} ${inactiveLetters.includes(char) && "disabled"} p-0 btn btn-outline-primary`}
           onClick={() => !disabled && addSelectedLetter(char)}
         >
           <span>{char}</span>

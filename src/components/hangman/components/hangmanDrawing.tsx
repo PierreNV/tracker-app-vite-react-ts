@@ -23,7 +23,7 @@ type HangmanDrawingProps = { numberOfIncorrectLetters: number };
 
 const HangmanDrawing = ({ numberOfIncorrectLetters }: HangmanDrawingProps) => {
   return (
-    <div className="position-relative mb-5">
+    <div className="position-relative mb-3">
       {bodyParts.slice(0, numberOfIncorrectLetters)} {Stand}
     </div>
   );
