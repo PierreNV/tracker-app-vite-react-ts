@@ -37,10 +37,10 @@ const expenseForm = ({ onSubmit }: Props) => {
       >
         <div className="d-flex flex-wrap align-content-between flex-row gap-2">
           <div className="col mb-3">
-            <select {...register("category")} name="category" id="category" className="form-select">
+            <select {...register("category")} name="category" id="category" className="form-select text-muted">
               <option defaultValue={"category"}>Category</option>
               {categories.map((category) => (
-                <option key={category} value={category}>
+                <option className="text-dark" key={category} value={category}>
                   {category}
                 </option>
               ))}
