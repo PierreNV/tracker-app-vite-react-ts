@@ -8,7 +8,7 @@ const ExpenseTracker = () => {
 
   const [expenses, setExpenses] = useState([
     { id: 1, description: "milk", amount: 2, category: "Groceries" },
-    { id: 2, description: "lamp", amount: 4, category: "Misc" },
+    { id: 2, description: "Bad day", amount: 100, category: "Parking fees" },
     { id: 3, description: "cinema", amount: 10, category: "Entertainment" },
   ]);
 
