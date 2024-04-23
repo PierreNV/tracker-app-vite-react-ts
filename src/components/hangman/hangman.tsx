@@ -18,9 +18,9 @@ const Hangman = () => {
   const incorrectLetters = (): string[] => selectedLetters.filter((letter) => !mysteryWord.includes(letter));
   const correctLetters = (): string[] => selectedLetters.filter((letter) => mysteryWord.includes(letter));
 
-  const isLoser = (): boolean => incorrectLetters().length >= 6;
-  const isWinnner = (): boolean => mysteryWord.split("").every((letter) => selectedLetters.includes(letter));
-  const resetStates = (): void => {
+  const isLoser = () => incorrectLetters().length >= 6;
+  const isWinnner = () => mysteryWord.split("").every((letter) => selectedLetters.includes(letter));
+  const resetStates = () => {
     setMysteryWord(() => generateSingleWord());
     setSelectedLetters(() => []);
   };
@@ -40,7 +40,7 @@ const Hangman = () => {
     <div className="text-center d-flex flex-column mx-auto align-items-center">
       <ResultBar isLoser={isLoser} isWinnner={isWinnner} resetStates={resetStates} />
       <HangmanDrawing numberOfIncorrectLetters={incorrectLetters().length} />
-      <HangmanWord selectedLetters={selectedLetters} mysteryWord={mysteryWord} />
+      <HangmanWord selectedLetters={selectedLetters} mysteryWord={mysteryWord} isLoser={isLoser} />
       <Keyboard activeLetters={correctLetters()} inactiveLetters={incorrectLetters()} addSelectedLetter={addSelectedLetter} disabled={isLoser()} />
     </div>
   );
