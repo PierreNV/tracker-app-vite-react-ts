@@ -18,6 +18,10 @@ const Hangman = () => {
 
   const isLoser = (): boolean => incorrectLetters().length >= 6;
   const isWinnner = (): boolean => mysteryWord.split("").every((letter) => selectedLetters.includes(letter));
+  const resetStates = (): void => {
+    setMysteryWord(() => generateSingleWord());
+    setSelectedLetters(() => []);
+  };
 
   const addSelectedLetter = useCallback(
     (letter: string) => {
@@ -36,7 +40,7 @@ const Hangman = () => {
         {isLoser() && (
           <button
             onClick={() => {
-              window.location.reload();
+              resetStates();
             }}
             className="btn btn-lg btn-danger"
           >
@@ -46,7 +50,7 @@ const Hangman = () => {
         {isWinnner() && (
           <button
             onClick={() => {
-              window.location.reload();
+              resetStates();
             }}
             className="btn btn-lg btn-success"
           >
