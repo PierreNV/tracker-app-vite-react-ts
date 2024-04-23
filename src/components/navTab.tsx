@@ -11,7 +11,7 @@ const NavTab = () => {
         </li>
         <li className="nav-item" role="presentation">
           <NavLink className="nav-link" to="/expense">
-            Expense tracker
+            Expense Tracker
           </NavLink>
         </li>
         <li className="nav-item" role="presentation">
